@@ -1,0 +1,28 @@
+.navbar .nav-link {
+  color: #000;
+  transition: 0.5s;
+  font-size: 18px;
+  text-transform: initial;
+}
+
+.navbar .nav-link-active {
+  color: #000;
+  font-weight: bold;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.navbar .nav-link:hover {
+  color: #000;
+  font-weight: bold;
+  transition: 0.5s;
+  font-size: 15px;
+}
+
+.call-off-action {
+  background-color: dodgerblue;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}

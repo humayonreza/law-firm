@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  background-color: #ffe0bd;
+}
+.slid {
+  margin: 3px;
+  padding: 25px;
+  border: 2px solid #f00;
+}
+
+// =============  Font =====
+
+.gff-lora {
+  font-family: "Lora", serif;
+}
+
+.txt-header {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.txt-header-md {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.txt-md {
+  font-size: 14px;
+}
+
+.txt-bg {
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+.a-learnmore {
+  color: black;
+  cursor: pointer;
+}
+
+.a-learnmore:hover {
+  color: bule;
+  cursor: pointer;
+  font-weight: bold;
+}
+// ============================= Flex ======================
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
