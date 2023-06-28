@@ -17,10 +17,19 @@ export class SliderComponent implements OnInit {
     this.mediaPath = this.BackendService.mediaPath;
     console.log(this.data);
   }
-  slideShow = {
-    slidesToShow: screen.width > 480 ? 3 : 1,
+  slideShowBig = {
+    slidesToShow: 3,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    arrows: false,
+  };
+
+  slideShowSmart = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
     infinite: true,
     autoplay: true,
     arrows: false,

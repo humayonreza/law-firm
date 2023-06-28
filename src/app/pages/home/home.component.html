@@ -1,114 +1,193 @@
-<div class="row">
-  <div class="col-sm-12 text-center" style="margin-top: 62px">
-    <img
-      src="{{ mediaPath + 'images/site/banners/home.png' }}"
-      width="100%"
-      height="auto"
-    />
-    <!-- <app-slider
-      [data]="arrContents[0].contents"
-      [section]="sliderCat1"
-    ></app-slider> -->
+<div class="isSmart">
+  <div class="flex shadow">
+    <div style="padding: 1px" class="flex-start">
+      <img
+        src="{{ mediaPath + 'images/site/common/logo.png' }}"
+        class="logo"
+        width="50"
+        height="50"
+      />
+      <div class="mt-2 txt-black bold">
+        <div>Inns of court</div>
+        <div class="text-end" style="margin-top: -5px">chambers</div>
+      </div>
+    </div>
+    <!-- <div style="padding: 10px 15px"><h1>Our Law Firm</h1></div> -->
+    <div>
+      <mat-icon
+        class="menu-icon"
+        data-bs-toggle="offcanvas"
+        href="#offcanvasExample"
+        role="button"
+        aria-controls="offcanvasExample"
+        >menu</mat-icon
+      >
+    </div>
   </div>
-  <div class="outer text-center">
-    <div class="col-sm-12" style="margin-top: 30px">
-      <div class="gff-lora" style="font-weight: 900; font-size: 35px">
-        {{ arrContents[1].title }}
-      </div>
-      <div class="txt-body mt-3">{{ arrContents[1].txt }}</div>
-      <!-- <div class="row d-flex align-items-center justify-content-center mt-3">
-        <div
-          class="col-sm-3 mt-3 mb-2"
-          *ngFor="let data of arrContents[1].contents"
-        >
-          <div class="shadow" style="padding: 15px 10px">
-            <div class="txt-header-md">
-              {{ data.title }}
-            </div>
-            <div class="mt-2">
-              <img
-                src="{{ mediaPath + 'images/site/portfolio/' + data.imgId }}"
-                width="100%"
-                height="auto"
-              />
-            </div>
-            <div class="txt-md mt-2">{{ data.txt }}</div>
-          </div>
-        </div>
-      </div> -->
+</div>
+<div class="isBig">
+  <app-navbar></app-navbar>
+</div>
+<div class="isBig">
+  <img
+    class="object-fit-cover"
+    src="{{ mediaPath + 'images/site/banners/home.png' }}"
+    width="100%"
+    height="auto"
+    style="margin-top: 65px"
+  />
+</div>
+<div class="isSmart" style="margin-top: 35px">
+  <img
+    class="object-fit-cover"
+    src="{{ mediaPath + 'images/site/banners/homeSmart2.png' }}"
+    width="100%"
+    height="auto"
+  />
+</div>
+<div class="text-center google-font">
+  <div class="row d-flex align-items-center justify-content-center bg-top-left">
+    <div class="col-sm-6 inner txt-align-one slide">
+      <div class="header-bg" style="color: #000">Who we are</div>
+      <div class="header-md mt-3" style="color: #667">This is our slogun</div>
     </div>
+    <div
+      class="col-sm-6 inner txt-md bg-top-right txt-align-two slide"
+      style="color: #000; padding: 40px 20px"
+    >
+      <div class="col-sm-8">
+        <span class="bold" style="color: 000">"Inns of Court Chambers"</span> ,
+        your trusted source for comprehensive legal services. With a steadfast
+        commitment to excellence and a team of highly skilled attorneys, we
+        strive to meet the diverse legal needs of our clients. Whether you are
+        an individual, a small business, or a multinational corporation, our
+        firm is dedicated to delivering top-notch legal solutions tailored to
+        your specific requirements.
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="col-sm-12" style="margin-top: 60px">
-      <div class="gff-lora" style="font-weight: 900; font-size: 35px">
-        {{ arrContents[2].title }}
-      </div>
-      <div class="txt-body mt-3">{{ arrContents[2].txt }}</div>
-      <div class="row d-flex align-items-center justify-content-center mt-3">
-        <div class="col-sm-3 mt-3" *ngFor="let data of arrContents[2].contents">
-          <div class="shadow" style="padding: 25px 10px">
-            <div>
-              <img
-                src="{{ mediaPath + 'images/site/services/' + data.imgId }}"
-                width="100"
-                height="100"
-                style="border-radius: 50%; border: 4px solid #dca465"
-              />
-            </div>
-            <div class="txt-header-md">
-              {{ data.title }}
-            </div>
-            <div class="txt-md mt-2">{{ data.txt }}</div>
-            <div class="mt-2">
-              <button
-                mat-raised-button
-                class="btn-services"
-                (click)="extract_service_details(data.serviceId)"
-              >
-                Learn more ...
-              </button>
-            </div>
+<div
+  class="col-sm-12 txt-md outer text-center google-font"
+  style="margin-top: 60px"
+>
+  <div class="header-bg">
+    {{ arrContents[2].title }}
+  </div>
+  <div class="header-md mt-3">{{ arrContents[2].txt }}</div>
+  <div class="row d-flex align-items-center justify-content-center mt-3">
+    <div class="col-sm-3 mt-4" *ngFor="let data of arrContents[2].contents">
+      <div class="shadow" style="padding: 25px 10px; background-color: #eee">
+        <div>
+          <img
+            src="{{ mediaPath + 'images/site/services/' + data.imgId }}"
+            width="100"
+            height="100"
+            style="border-radius: 50%; border: 4px solid #eee"
+          />
+        </div>
+        <div class="header-md">
+          {{ data.title }}
+        </div>
+        <div class="row mb-3" style="background-color: #fff">
+          <div class="txt-md mt-2">{{ data.txt }}</div>
+          <div class="mt-3 mb-3">
+            <button
+              mat-raised-button
+              class="btn-services google-font header-md"
+              (click)="extract_service_details(data.serviceId)"
+            >
+              Learn more ...
+            </button>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <div class="col-sm-12" style="margin-top: 60px">
-      <div class="gff-lora" style="font-weight: 900; font-size: 35px">
-        {{ arrContents[3].title }}
-      </div>
-      <div class="txt-body mt-3">{{ arrContents[3].txt }}</div>
-      <div class="row d-flex align-items-center justify-content-center mt-3">
-        <div class="col-sm-3 mt-2" *ngFor="let data of arrContents[3].contents">
-          <div class="p-2" style="border: 3px solid #eee; border-radius: 15px">
-            <!-- <h2>{{ data.title }}</h2> -->
-            <img
-              src="{{ mediaPath + 'images/site/clients/' + data.imgId }}"
-              width="100"
-              height="100"
-              style="border-radius: 50%; border: 4px solid #eee"
-            />
-          </div>
-        </div>
+<div
+  class="col-sm-12 text-center outer bg-light google-font"
+  style="margin-top: 60px"
+>
+  <div class="header-bg mt-3">
+    {{ arrContents[3].title }}
+  </div>
+  <div class="header-md mt-3">{{ arrContents[3].txt }}</div>
+  <div class="row d-flex align-items-center justify-content-center mt-3">
+    <div class="col-sm-3 mt-2" *ngFor="let data of arrContents[3].contents">
+      <div class="p-2" style="border: 3px solid #eee; border-radius: 15px">
+        <!-- <h2>{{ data.title }}</h2> -->
+        <img
+          class="slide"
+          src="{{ mediaPath + 'images/site/clients/' + data.imgId }}"
+          width="100%"
+          height="auto"
+          style="border: 4px solid #eee"
+        />
       </div>
     </div>
+  </div>
+</div>
 
-    <div class="parallax-effect2 mt-4" style="padding: 20px 10px; color: #ddd">
-      <div class="gff-lora" style="font-weight: 900; font-size: 35px">
-        {{ arrContents[4].title }}
-      </div>
-      <div class="txt-md mt-2">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-sm-6 bold txt-bg">
-            {{ arrContents[4].txt }}
-          </div>
-        </div>
+<div
+  class="parallax-effect2 mt-4 text-center google-font"
+  style="padding: 20px 10px; color: #ddd"
+>
+  <div class="header-bg">
+    {{ arrContents[4].title }}
+  </div>
+  <div class="txt-md mt-2">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-sm-6 header-md">
+        {{ arrContents[4].txt }}
       </div>
     </div>
-    <div class="col-sm-12 mt-1">
-      <app-slider
-        [data]="arrContents[4].contents"
-        [section]="sliderCat2"
-      ></app-slider>
+  </div>
+</div>
+<div class="col-sm-12 mt-1">
+  <app-slider
+    [data]="arrContents[4].contents"
+    [section]="sliderCat2"
+  ></app-slider>
+</div>
+<!-- ======================================  OFF CANVAS ======================================== -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h2>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have
+      chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+      >
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
     </div>
   </div>
 </div>

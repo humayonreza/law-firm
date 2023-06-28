@@ -6,46 +6,56 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+
   overflow-x: hidden;
-  background-color: #ffe0bd;
-}
-.slid {
-  margin: 3px;
-  padding: 25px;
-  border: 2px solid #f00;
+  // background-color: #ffe0bd;
 }
 
-// =============  Font =====
-
-.gff-lora {
-  font-family: "Lora", serif;
+.google-font {
+  font-family: "Yanone Kaffeesatz";
 }
 
-.txt-header {
-  font-size: 22px;
-  font-weight: 900;
+.txt-white {
+  color: white;
 }
 
-.txt-header-md {
-  font-size: 18px;
-  font-weight: 900;
+.txt-black {
+  color: black;
+}
+
+.txt-red {
+  color: red;
+}
+
+.txt-green {
+  color: green;
 }
 
 .txt-md {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .txt-bg {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 h1 {
   text-transform: capitalize;
+}
+
+.bg-light-one {
+  background-color: #b9b5b5;
+}
+
+.bg-light-two {
+  background-color: #afaeae;
 }
 
 .a-learnmore {
@@ -57,6 +67,21 @@ h1 {
   color: bule;
   cursor: pointer;
   font-weight: bold;
+}
+
+.header-bg {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.header-md {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.header-sm {
+  font-size: large;
+  font-weight: 900;
 }
 // ============================= Flex ======================
 .flex {
@@ -76,4 +101,23 @@ h1 {
 .flex-end {
   display: flex;
   justify-content: flex-end;
+}
+
+.logo {
+  margin: 2px 10px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #eee;
+}
+.menu-icon {
+  margin: 10px 20px;
+  font-size: 30px;
+}
+
+.underline {
+  display: inline;
+  margin-top: -10px;
+  border-bottom: 2px solid #888;
+  padding-bottom: 2px;
+  transition: 0.5s;
 }

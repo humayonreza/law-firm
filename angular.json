@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lawfirm": {
+    "template_ang_15_2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lawfirm",
+            "outputPath": "dist/template_ang_15_2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lawfirm:build:production"
+              "browserTarget": "template_ang_15_2:build:production"
             },
             "development": {
-              "browserTarget": "lawfirm:build:development"
+              "browserTarget": "template_ang_15_2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lawfirm:build"
+            "browserTarget": "template_ang_15_2:build"
           }
         },
         "test": {
