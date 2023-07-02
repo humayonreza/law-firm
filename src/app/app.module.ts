@@ -13,12 +13,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './pages/about/about.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 import { ContactComponent } from './pages/contact/contact.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { MatButtonModule } from '@angular/material/button';
 import { BookforconsultationComponent } from './pages/bookforconsultation/bookforconsultation.component';
 import { FooterComponent } from './components/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +37,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
   ],
   imports: [
+    MatSelectModule,
+    MatInputModule,
     MatButtonModule,
     MatIconModule,
     HttpClientModule,

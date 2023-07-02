@@ -22,3 +22,57 @@
   background-color: #dca465;
   color: #fff;
 }
+
+.overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.overlay-txt {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(20%, 10%);
+}
+
+.service-panel:hover {
+  transition: 0.5s;
+  cursor: pointer;
+
+  .btn-services {
+    color: dodgerblue;
+    border: 2px solid rgb(133, 192, 248);
+  }
+
+  .img-service {
+    border: 4px solid rgb(63, 156, 250);
+    padding: 0;
+    transition: 0.5s;
+  }
+}
+
+.service-panel {
+  padding: 25px 5px;
+  background-color: #eee;
+  transition: 0.5s;
+}
+
+.img-service {
+  border-radius: 50%;
+  border: 4px solid #ddd;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.smIcon {
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.smIcon:hover {
+  padding: 0;
+  transition: 0.5s;
+}

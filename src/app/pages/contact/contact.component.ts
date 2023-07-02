@@ -8,19 +8,35 @@ import { ContentService } from 'src/app/services/content.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  arrContents: any = [];
   mediaPath: string = '';
-  sliderCat1: string = 'slider';
-  sliderCat2: string = 'review';
+  // mediaPath: string = '';
+  arrContents: any = [];
+  arrNavByUser: any = [];
+  isSmart: boolean = false;
+  bannerImg: string = '';
+  msg_email: string = '';
+  student_id: number = 0;
+
+  msg_title: string = '';
+  msg_body: string = '';
+
   constructor(
-    private contentService: ContentService,
-    private backendService: BackendService
+    private backendService: BackendService,
+    public contentService: ContentService
   ) {}
+
+  submit_query(data: any) {}
+
   ngOnInit(): void {
+    this.isSmart = screen.width < 500 ? true : false;
     this.mediaPath = this.backendService.mediaPath;
+    this.bannerImg =
+      screen.width < 500 ? 'contactusSmart.png' : 'contactusBig.png';
+    // this.bannerImg = screen.width < 500 ? 'contactus.png' : 'contactus.png';
+
     this.arrContents = this.contentService.web_content.filter(
       (p: any) => p.page_id == 'contact'
     )[0].data;
-    console.log('Contact :', this.arrContents);
+    console.log('Contact us :', this.arrContents);
   }
 }

@@ -1,35 +1,140 @@
 <div class="row">
-  <div class="col-sm-12" style="margin-top: 65px">
-    <div class="banner">
+  <div class="col-sm-12" style="margin-top: 60px">
+    <!-- <div class="overlay flex">
+      <div class="overlay-content-left">
+        <div class="container-left-top"></div>
+        <div class="container-left-bottom"></div>
+      </div>
+      <div class="overlay-content-right">
+        <div class="container-right-top"></div>
+        <div class="container-right-bottom"></div>
+      </div>
+    </div> -->
+    <div>
       <img
-        src="{{ mediaPath + 'images/site/services/' + bannerImg }}"
-        alt=""
+        class="isBig"
+        src="{{ mediaPath + 'images/site/banners/bannerBig.png' }}"
         width="100%"
         height="auto"
+        style="margin-top: 5px"
+      />
+      <img
+        class="isSmart"
+        src="{{ mediaPath + 'images/site/banners/bannerSmart.png' }}"
+        width="100%"
+        height="auto"
+        style="margin-top: 5px"
       />
     </div>
-    <div class="p-2 d-flex align-items-center justify-content-center">
-      <div class="outer" *ngIf="service_id > 0">
-        <div class="txt-header-md">{{ arrContents[0].title }}</div>
-        <div class="txt-md mt-1 mb-2">{{ arrContents[0].txt }}</div>
-        <div *ngFor="let data of arrContents[0].contents" class="txt-md mt-1">
-          <ul>
-            <li>
-              {{ data.txt }}
-            </li>
-          </ul>
+    <div class="text-center google-font">
+      <div
+        class="row d-flex align-items-center justify-content-center bg-top-left"
+      >
+        <div class="col-sm-6 inner txt-align-one slide">
+          <div class="header-bg" style="color: #000">
+            <h1 style="font-weight: 900">{{ arrServiceObj[0].title }}</h1>
+          </div>
+          <div class="header-md" style="color: #667">
+            Seriously serious on job
+          </div>
+        </div>
+        <div
+          class="col-sm-6 inner txt-md bg-top-right txt-align-two slide"
+          style="color: #000; padding: 10px 20px"
+        >
+          <div class="col-sm-8 mt-1 mb-3">
+            <div>
+              <p>{{ arrServiceObj[0].txt }}</p>
+              <p class="text-start isBig">
+                <button
+                  class="btn-bookin"
+                  color="accent"
+                  style="
+                    padding: 10px;
+                    height: 70px;
+                    font-size: 18px;
+                    margin-right: 5px;
+                  "
+                >
+                  BOOK IN <br />
+                  <span class="span-free_consultation" style="font-size: 12px"
+                    >FOR FREE CONSULTATION</span
+                  >
+                </button>
+
+                <button
+                  class="btn-bookin"
+                  style="padding: 10px 15px; height: 70px; font-size: 18px"
+                >
+                  NEED SOLUTION?? <br />
+                  <span class="span-free_consultation" style="font-size: 12px"
+                    >MEET OUR EXPERTS</span
+                  >
+                </button>
+              </p>
+            </div>
+            <div class="isSmart">
+              <p class="flex mt-3 p-1">
+                <button class="btn shadow btn-bookin-smart">
+                  BOOK IN<br />
+                  <span style="color: #000">FOR FREE CONSULTATION</span>
+                </button>
+                <button class="btn shadow btn-bookin-smart">
+                  NEED SOLUTION<br />
+                  <span style="color: #000">MEET OUR EXPERTS</span>
+                </button>
+              </p>
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="col-sm-6">
+                  <div class="flex text-center" style="margin-top: 10px">
+                    <img
+                      *ngFor="let icon of arrServiceObj.contents"
+                      class="object-fit-cover shadow m-2"
+                      src="{{
+                        mediaPath +
+                          'images/site/social_media_icons/' +
+                          icon.imgId
+                      }}"
+                      width="40"
+                      height="40"
+                      style="border-radius: 50%"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="outer" *ngIf="service_id == 0">
-        <div *ngFor="let data of arrContents">
-          <div class="txt-header-md">{{ data.title }}</div>
-          <div class="txt-md mt-1 mb-2">{{ data.txt }}</div>
-          <div *ngFor="let dx of data.contents" class="txt-md mt-1">
-            <ul>
-              <li>
+    </div>
+
+    <div class="text-center google-font">
+      <div
+        class="row d-flex align-items-center justify-content-center bg-top-right"
+      >
+        <div class="col-sm-6 inner txt-align-one slide">
+          <div class="header-bg" style="color: #000">
+            <h1 style="font-weight: 900">Service features</h1>
+          </div>
+          <div class="header-md" style="color: #667">
+            Your one stop solution
+          </div>
+        </div>
+        <div
+          class="col-sm-6 inner txt-md bg-top-left txt-align-two slide"
+          style="color: #000; padding: 10px 20px"
+        >
+          <div class="col-sm-8 mt-1 mb-3">
+            <div class="isBig">
+              <div class="mt-2" *ngFor="let data of arrServiceObj[0].contents">
                 {{ data.txt }}
-              </li>
-            </ul>
+              </div>
+            </div>
+            <div class="isSmart">
+              <div class="mt-2" *ngFor="let data of arrServiceObj[0].contents">
+                {{ data.txt }}
+              </div>
+            </div>
           </div>
         </div>
       </div>

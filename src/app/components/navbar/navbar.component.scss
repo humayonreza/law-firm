@@ -1,8 +1,7 @@
 .navbar .nav-link {
   color: #000;
   transition: 0.5s;
-  font-size: 18px;
-  text-transform: initial;
+  font-size: 16px;
 }
 
 .navbar .nav-link-active {
@@ -16,7 +15,7 @@
   color: #000;
   font-weight: bold;
   transition: 0.5s;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .call-off-action {
@@ -25,4 +24,7 @@
   color: #fff;
   padding: 10px;
   text-decoration: none;
+}
+a {
+  cursor: pointer;
 }

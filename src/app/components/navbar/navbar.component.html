@@ -1,18 +1,14 @@
-<nav
-  class="navbar navbar-expand-lg fixed-top shadow"
-  style="padding: 0 2px; background-color: #eee; border-bottom: 3px solid #ddd"
->
+<nav class="navbar navbar-expand-lg bg-light fixed-top" style="padding: 0">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/" style="padding: 5px">
-      <img
+    <a routerLink="/" class="navbar-brand"
+      ><img
         class="shadow logo"
         style="border: 2px solid #ddd; border-radius: 50%; padding: 5px"
         src="{{ mediaPath + 'images/site/common/logo.png' }}"
         alt=""
-        width="50"
-        height="50"
-      />
-    </a>
+        width="45"
+        height="45"
+    /></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -26,28 +22,96 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" *ngFor="let li of arrNav">
+        <li class="nav-item">
           <a
             class="nav-link active"
-            [ngClass]="li.isActive == 1 ? 'nav-link-active' : 'nav-link'"
-            (click)="change_route(li.route)"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
             aria-current="page"
-            style="cursor: pointer"
-            >{{ li.routeName }}
-          </a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <button
-            mat-raised-button
-            class="call-off-action"
-            (click)="change_route('book-for-consultation')"
-            aria-current="page"
-            style="cursor: pointer; background-color: black; color: white"
+            (click)="on_route_change('/', 'NA')"
+            >Home</a
           >
-            BOOK FOR CONSULTATION
-          </button>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            (click)="on_route_change('/about', 'NA')"
+            >About us</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'general-counsel')"
+                >General Counsel</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'criminal-litigation')"
+                >Criminal Litigation</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'civil-litigation')"
+                >Civil Litigation</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'arbitration-mediation')"
+                >Arbitration & Mediation</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'commercial-law')"
+                >Commercial Law</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'public-law')"
+                >Public Law</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                (click)="on_route_change('/services', 'property-law')"
+                >Property Law</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="#"
+                >Book in for free consultation</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="on_route_change('/contact', 'NA')"
+            >Contact us</a
+          >
         </li>
       </ul>
     </div>

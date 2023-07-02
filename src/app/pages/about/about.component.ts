@@ -8,19 +8,24 @@ import { ContentService } from 'src/app/services/content.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  arrContents: any = [];
   mediaPath: string = '';
-  sliderCat1: string = 'slider';
-  sliderCat2: string = 'review';
+  // mediaPath: string = '';
+  arrContents: any = [];
+  arrNavByUser: any = [];
+  isSmart: boolean = false;
+  bannerImg: string = '';
   constructor(
-    private contentService: ContentService,
-    private backendService: BackendService
+    private backendService: BackendService,
+    public contentService: ContentService
   ) {}
+
   ngOnInit(): void {
+    this.isSmart = screen.width < 500 ? true : false;
     this.mediaPath = this.backendService.mediaPath;
+    this.bannerImg = screen.width < 500 ? 'aboutSmart.png' : 'aboutBig.png';
     this.arrContents = this.contentService.web_content.filter(
       (p: any) => p.page_id == 'about'
     )[0].data;
-    console.log('About :', this.arrContents);
+    console.log('About us :', this.contentService.web_content);
   }
 }

@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   mediaPath: string = '';
   sliderCat1: string = 'slider';
   sliderCat2: string = 'review';
+
   constructor(
     private contentService: ContentService,
     private backendService: BackendService,
@@ -24,6 +25,17 @@ export class HomeComponent implements OnInit {
       queryParams: { service_id: serviceId },
     });
   }
+
+  on_route_change(main_route: string, child_route: string) {
+    if (child_route == 'NA') {
+      this.router.navigate([main_route]);
+    } else {
+      this.router.navigate([main_route], {
+        queryParams: { param: child_route },
+      });
+    }
+  }
+
   ngOnInit(): void {
     this.mediaPath = this.backendService.mediaPath;
     this.arrContents = this.contentService.web_content.filter(

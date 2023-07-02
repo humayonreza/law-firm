@@ -1,5 +1,35 @@
 <div class="row">
-  <div class="col-sm-12" style="margin-top: 65px">
-    <p>about works!</p>
+  <div class="col-sm-12">
+    <div class="mb-2" style="margin-top: 55px">
+      <div>
+        <img
+          class="isBig"
+          src="{{ mediaPath + 'images/site/banners/bannerBig.png' }}"
+          width="100%"
+          height="auto"
+          style="margin-top: 5px"
+        />
+        <img
+          class="isSmart"
+          src="{{ mediaPath + 'images/site/banners/bannerSmart.png' }}"
+          width="100%"
+          height="auto"
+          style="margin-top: 5px"
+        />
+      </div>
+    </div>
+    <div class="outer">
+      <div class="p-3 mt-3 mb-3" *ngFor="let dx of arrContents">
+        <div>
+          <h1 style="font-weight: 900">{{ dx.title }}</h1>
+          <div class="mb-2" style="margin-top: -8px">
+            {{ dx.description }}
+          </div>
+          <ul *ngFor="let db of dx.txt">
+            <li>{{ db.text }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

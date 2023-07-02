@@ -24,6 +24,16 @@ export class NavbarComponent implements OnInit {
     }
     console.log('isActive : ', this.arrNav);
   }
+
+  on_route_change(main_route: string, child_route: string) {
+    if (child_route == 'NA') {
+      this.router.navigate([main_route]);
+    } else {
+      this.router.navigate([main_route], {
+        queryParams: { param: child_route },
+      });
+    }
+  }
   ngOnInit(): void {
     this.mediaPath = this.BackendService.mediaPath;
     this.arrNav = this.contentService.web_content.filter(

@@ -28,6 +28,7 @@ export class ContentService {
               route: '',
               icon: 'home',
               isActive: 0,
+              subMenu: [],
             },
             {
               ser: 2,
@@ -35,6 +36,43 @@ export class ContentService {
               route: '/services',
               icon: 'perm_phone_msg',
               isActive: 0,
+              subMenu: [
+                {
+                  ser: 1,
+                  serviceId: 'general-council',
+                  subRouteName: 'General Counsel',
+                },
+                {
+                  ser: 2,
+                  serviceId: 'criminal-litigation',
+                  subRouteName: 'Criminal Litigation',
+                },
+                {
+                  ser: 3,
+                  serviceId: 'civil-litigation',
+                  subRouteName: 'Civil Litigation',
+                },
+                {
+                  ser: 4,
+                  serviceId: 'arbitration-mediation',
+                  subRouteName: 'Arbitration & Mediation',
+                },
+                {
+                  ser: 5,
+                  serviceId: 'commercial-law',
+                  subRouteName: 'Commercial Law',
+                },
+                {
+                  ser: 6,
+                  serviceId: 'public-law',
+                  subRouteName: 'Public Law',
+                },
+                {
+                  ser: 7,
+                  serviceId: 'property-law',
+                  subRouteName: 'Property Law',
+                },
+              ],
             },
             {
               ser: 3,
@@ -42,6 +80,7 @@ export class ContentService {
               route: '/blog',
               icon: 'perm_phone_msg',
               isActive: 0,
+              subMenu: [],
             },
             {
               ser: 4,
@@ -49,6 +88,7 @@ export class ContentService {
               route: '/about',
               icon: 'developer_board',
               isActive: 0,
+              subMenu: [],
             },
             // {
             //   ser: 3,
@@ -63,6 +103,7 @@ export class ContentService {
               route: '/contact',
               icon: 'perm_phone_msg',
               isActive: 0,
+              subMenu: [],
             },
           ],
         },
@@ -74,34 +115,13 @@ export class ContentService {
       data: [
         {
           ser: 1,
-          component: 'slider',
-          contents: [
-            {
-              sliderId: 1,
-              imgId: '1.png',
-              title: 'Some title 1',
-              txt: 'Some Text 1',
-            },
-            {
-              sliderId: 2,
-              imgId: '2.png',
-              title: 'Some title 2',
-              txt: 'Some Text 2',
-            },
-            {
-              sliderId: 3,
-              imgId: '3.png',
-              title: 'Some title 3',
-              txt: 'Some Text 3',
-            },
-            {
-              sliderId: 4,
-              imgId: '4.png',
-              title: 'Some title 4',
-              txt: 'Some Text 4',
-            },
-          ],
+          component: 'home',
+          title: 'Who we are',
+          slogun: 'Develope and advance in career',
+          txt: 'Welcome to JUST Law Firm, where justice meets excellence. ',
+          imgId: 'home.png',
         },
+
         {
           ser: 2,
           component: 'portfolio',
@@ -142,43 +162,50 @@ export class ContentService {
 
           contents: [
             {
-              serviceId: 1,
+              ser: 1,
+              serviceId: 'general-counsel',
               imgId: '1.png',
               title: 'General Counsel',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
             },
             {
-              serviceId: 2,
+              ser: 2,
+              serviceId: 'criminal-litigation',
               imgId: '2.png',
               title: 'Criminal Litigation',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
             },
             {
-              serviceId: 3,
+              ser: 3,
+              serviceId: 'civil-litigation',
               imgId: '3.png',
               title: 'Civil Litigation',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
             },
             {
-              serviceId: 4,
+              ser: 4,
+              serviceId: 'arbitration-mediation',
               imgId: '4.png',
               title: 'Arbitration & Mediation',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
             },
             {
-              serviceId: 5,
+              ser: 5,
+              serviceId: 'commercial-law',
               imgId: '5.png',
               title: 'Commercial Law',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
             },
             {
-              serviceId: 6,
+              ser: 6,
+              serviceId: 'public-law',
               imgId: '6.png',
               title: 'Public Law',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
             },
             {
-              serviceId: 7,
+              ser: 7,
+              serviceId: 'property-law',
               imgId: '7.png',
               title: 'Property Law',
               txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
@@ -217,38 +244,7 @@ export class ContentService {
             },
           ],
         },
-        // {
-        //   ser: 4,
-        //   component: 'Our Achievements',
-        //   title: 'Our Achievements',
-        //   txt: 'Welcome to Service Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights and delivering successful outcomes. At JUST Law Firm, we understand that every legal situation is unique. Welcome to Service Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights and delivering successful outcomes. At JUST Law Firm, we understand that every legal situation is unique',
-        //   contents: [
-        //     {
-        //       achievementId: 1,
-        //       imgId: '1.png',
-        //       title: 'Achievement Title One',
-        //       txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
-        //     },
-        //     {
-        //       achievementId: 2,
-        //       imgId: '2.png',
-        //       title: 'Achievement Title Two',
-        //       txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
-        //     },
-        //     {
-        //       achievementId: 3,
-        //       imgId: '3.png',
-        //       title: 'Achievement Title Three',
-        //       txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
-        //     },
-        //     {
-        //       achievementId: 4,
-        //       imgId: '4.png',
-        //       title: 'Achievement Title Four',
-        //       txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
-        //     },
-        //   ],
-        // },
+
         {
           ser: 5,
           component: 'review',
@@ -299,17 +295,95 @@ export class ContentService {
             },
           ],
         },
+        {
+          ser: 6,
+          component: 'Social links',
+          title: 'Get in touch',
+          txt: 'check us on',
+          contents: [
+            {
+              ser: 1,
+              imgId: '1.png',
+              title: 'facebook',
+              link: '',
+            },
+            {
+              ser: 2,
+              imgId: '2.png',
+              title: 'Instagram',
+              link: '',
+            },
+            {
+              ser: 3,
+              imgId: '3.png',
+              title: 'tiktok',
+              link: '',
+            },
+          ],
+        },
       ],
     },
     {
       ser: 3,
       page_id: 'about',
-      data: [{}],
+      data: [
+        {
+          ser: 1,
+          title: 'Our team',
+          description:
+            'Our team of experienced educators and industry experts curate and deliver courses that are relevant, practical, and engaging. We leverage cutting-edge technology and instructional design principles to create immersive and interactive learning experiences. Whether you are a student seeking to expand your academic horizons, a professional aiming to upskill or reskill, or an enthusiast pursuing personal interests, we have a course for you.',
+          txt: [
+            {
+              text: 'We are dedicated to revolutionizing education through our comprehensive range of online courses. With a passion for learning and a commitment to excellence, we strive to empower individuals around the globe to enhance their knowledge, skills, and career prospects.',
+            },
+            {
+              text: 'We prioritize learner success and satisfaction, providing flexible learning options that fit seamlessly into busy lifestyles. Our intuitive platform offers 24/7 access to course materials, allowing learners to study at their own pace and convenience. Additionally, our responsive support team is readily available to assist learners throughout their educational journey.',
+            },
+            {
+              text: 'Join us on a transformative learning journey, unlock your potential, and shape your future with the power of knowledge. Discover endless possibilities and embark on a path of personal and professional growth with Trained up',
+            },
+          ],
+        },
+        {
+          ser: 2,
+          title: 'Our mission',
+          description:
+            'Our mission is to provide accessible and high-quality online courses that empower learners to acquire new knowledge, develop valuable skills, and achieve personal and professional growth. We strive to create a dynamic and engaging learning environment that fosters curiosity, collaboration, and continuous improvement. Through our innovative and learner-centric approach, we aim to inspire and equip individuals from diverse backgrounds to unlock their full potential and pursue lifelong learning opportunities. We are committed to delivering exceptional educational experiences that promote self-paced learning, flexibility, and convenience, enabling our learners to thrive in an ever-evolving digital world.',
+          txt: [
+            {
+              text: 'We are dedicated to revolutionizing education through our comprehensive range of online courses. With a passion for learning and a commitment to excellence, we strive to empower individuals around the globe to enhance their knowledge, skills, and career prospects.',
+            },
+            {
+              text: 'We prioritize learner success and satisfaction, providing flexible learning options that fit seamlessly into busy lifestyles. Our intuitive platform offers 24/7 access to course materials, allowing learners to study at their own pace and convenience. Additionally, our responsive support team is readily available to assist learners throughout their educational journey.',
+            },
+          ],
+        },
+      ],
     },
+
     {
       ser: 4,
       page_id: 'contact',
-      data: [{}],
+
+      data: [
+        {
+          ser: 1,
+          title: 'You are important',
+          description:
+            'We encourage you to connect with us on social media to stay updated on our latest courses, promotions, and educational content. Follow us on [Social Media Platform] for engaging discussions and to be a part of our vibrant learning community.',
+          txt: [
+            {
+              text: 'If you have any questions about our courses, enrollment process, or any other aspect of our online learning platform, our dedicated support team is ready to help. You can also explore our Frequently Asked Questions (FAQs) section, which may already provide answers to commonly asked questions.',
+            },
+            {
+              text: 'We understand the importance of timely responses, and we strive to provide efficient customer support. Our team will make every effort to respond to your inquiries promptly within our stated response time.',
+            },
+            {
+              text: 'We are excited to assist you on your learning journey and help you achieve your educational goals. Your success is our priority, and we look forward to supporting you every step of the way.',
+            },
+          ],
+        },
+      ],
     },
     {
       ser: 5,
@@ -326,122 +400,149 @@ export class ContentService {
       page_id: 'services',
       data: [
         {
-          serviceId: 1,
+          ser: 1,
+          serviceId: 'general-counsel',
           imgId: '1.png',
-          title: 'Company Secretarial Services',
-          txt: 'Welcome to JUST Law Firm, where justice meets excellence. ',
+          title: 'General Counsel',
+          txt: 'Lets start with General Counsel to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
           contents: [
             {
               id: 1,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 2,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 3,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
           ],
         },
         {
-          serviceId: 2,
+          ser: 2,
+          serviceId: 'criminal-litigation',
           imgId: '2.png',
-          title: 'Services for NRBs',
-          txt: 'Welcome to JUST Law Firm, where justice meets excellence. ',
+          title: 'Criminal Litigation',
+          txt: 'Lets start with Criminal litigation to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
           contents: [
             {
               id: 1,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 2,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 3,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
           ],
         },
         {
-          serviceId: 3,
+          ser: 3,
+          serviceId: 'civil-litigation',
           imgId: '3.png',
-          title: 'Legal Templates',
-          txt: 'Welcome to JUST Law Firm, where justice meets excellence. ',
+          title: 'Civil Litigation',
+          txt: 'Lets start with Civil Litigation to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
           contents: [
             {
               id: 1,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 2,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 3,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
           ],
         },
         {
-          serviceId: 4,
+          ser: 4,
+          serviceId: 'arbitration-mediation',
           imgId: '4.png',
-          title: 'Legal Packages',
-          txt: 'Welcome to JUST Law Firm, where justice meets excellence. ',
+          title: 'Arbitration & Mediation',
+          txt: 'Lets start with arbitration & mediation to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
           contents: [
             {
               id: 1,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 2,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 3,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
           ],
         },
         {
-          serviceId: 5,
+          ser: 5,
+          serviceId: 'commercial-law',
           imgId: '5.png',
-          title: 'Family Dispute Resolution Services',
-          txt: 'Welcome to JUST Law Firm, where justice meets excellence. ',
+          title: 'Commercial Law',
+          txt: 'Lets start with Commercial Law to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
           contents: [
             {
               id: 1,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 2,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 3,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
           ],
         },
         {
-          serviceId: 6,
+          ser: 6,
+          serviceId: 'public-law',
           imgId: '6.png',
-          title: 'One Stop Legal Service',
-          txt: 'Welcome to JUST Law Firm, where justice meets excellence.',
+          title: 'Public Law',
+          txt: 'Lets start with Public Law to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
           contents: [
             {
               id: 1,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 2,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
             {
               id: 3,
-              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
+            },
+          ],
+        },
+        {
+          ser: 7,
+          serviceId: 'property-law',
+          imgId: '7.png',
+          title: 'Property Law',
+          txt: 'Lets start with Property Law to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights. Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients. With a team of highly skilled attorneys, we are committed to fighting for your rights',
+          contents: [
+            {
+              id: 1,
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
+            },
+            {
+              id: 2,
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
+            },
+            {
+              id: 3,
+              txt: 'Welcome to JUST Law Firm, where justice meets excellence. Our firm is dedicated to providing exceptional legal representation and personalized solutions for our clients.',
             },
           ],
         },
